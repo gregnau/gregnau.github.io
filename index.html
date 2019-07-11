@@ -1,0 +1,33 @@
+---
+layout: default
+title: {{ site.name }}
+---
+
+<div id="home">
+  {% if paginator.page == 1 %}
+    {% include repositories.html %}
+
+    <h1 id=blog>Blog</h1>
+  {% else %}
+    <h1 id=blog>Blog | Page {{ paginator.page }}</h1>
+  {% endif %}
+
+  {% for post in paginator.posts %}
+    <hr>
+    <h2><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h2>
+    {{ post.content | truncatewords: 35 }}
+  {% endfor %}
+
+  <!-- Paginator controls -->
+  <div class="pagination">
+    {% if paginator.previous_page %}
+      <a href="{{ paginator.previous_page_path }}" class="previous">⬅ </a>
+    {% endif %}
+
+    <span class="page_number "> 📄{{ paginator.page }} </span>
+    
+    {% if paginator.next_page %}
+      <a href="{{ paginator.next_page_path }}" class="next"> ➡</a>
+    {% endif %}
+  </div>
+</div>

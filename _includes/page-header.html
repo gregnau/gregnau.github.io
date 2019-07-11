@@ -1,0 +1,9 @@
+<section class="page-header">
+  <img src="{{ site.avatar }}" />
+  <h1 class="project-name">{{ site.title }}</h1>
+  <h2 class="project-tagline">{{ site.description}}</h2>
+  {% if paginator.page == 1 %}
+	  <a href="#home" class="btn">Repositories</a>
+	  <a href="#blog" class="btn">TechBlog</a>
+  {% endif %}
+</section>

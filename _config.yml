@@ -1,0 +1,50 @@
+# Setup
+title:        "@GregNau"
+tagline:      Apps and Blog
+avatar:       /gregnau.png
+#baseurl:      ""
+paginate:     5
+locale:       "en"
+
+# Includes an icon in the footer for each username you enter
+footer-links:
+  email:      gregnau@live.nl
+  github:     gregnau
+  rss:        http://gregnau.github.io
+  twitter:    gregnau85
+  stackoverflow: users/7666071/gregnau # your stackoverflow profile, e.g. "users/50476/bart-kiers"
+
+  # Enter your Google Analytics web tracking code (e.g. UA-2110908-2) to activate tracking
+google_analytics: UA-115417832-1
+
+# About/contact
+author:
+  name:       GregNau
+  url:        http://gregnau.github.io
+
+# Gems
+gems:
+  - jekyll-paginate
+  - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
+  - jekyll-feed # Create an Atom feed using the official Jekyll feed gem
+
+#Others
+markdown: kramdown
+
+# Jekyll 3 now only supports Kramdown for Markdown
+kramdown:
+  # Use GitHub flavored markdown, including triple backtick fenced code blocks
+  input: GFM
+  # Jekyll 3 and GitHub Pages now only support rouge for syntax highlighting
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    # Use existing pygments syntax highlighting css
+    css_class: 'highlight'
+
+# Exclude these files from your production _site
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - README.md
+  - CNAME
